@@ -1,0 +1,76 @@
+.header {
+    padding: 5.5rem 0 3.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-body) 100%);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3.5rem;
+}
+
+.title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 6rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    box-shadow: var(--shadow-xs);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(226, 229, 235, 0.9);
+}
+
+.icon {
+    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+}
+
+.cardTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.cardDesc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}

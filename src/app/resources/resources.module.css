@@ -1,0 +1,219 @@
+.header {
+    padding: 5.5rem 0 3.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-body) 100%);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3.5rem;
+}
+
+.title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 6rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-card);
+    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-xs);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-alt) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-size: 3rem;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondary);
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.cardTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* ── Modal Overlay ── */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContainer {
+    background: #fff;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.modalHeader {
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.modalTitle {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.closeBtn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.closeBtn:hover {
+    background: var(--border);
+    color: var(--text);
+    transform: scale(1.05);
+}
+
+.modalScrollArea {
+    padding: 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ── Article Content ── */
+.articleContent {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.articleContent h3 {
+    font-size: 1.4rem;
+    color: var(--text);
+    margin: 2.5rem 0 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.articleContent p {
+    margin-bottom: 1.4rem;
+}
+
+.articleContent ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.articleContent li {
+    margin-bottom: 0.5rem;
+}
+
+.tipBox {
+    background: linear-gradient(135deg, var(--bg-surface), rgba(15, 118, 110, 0.03));
+    border-left: 4px solid var(--secondary);
+    padding: 1.5rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.tipBox strong {
+    color: var(--secondary);
+}

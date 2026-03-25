@@ -1,0 +1,249 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+.bodyCopy {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.65;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.introLine {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-xs);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.cardText {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.bulletList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+.bulletList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--bg-surface);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+    transition: border-color 0.2s ease;
+}
+
+.bulletList li:hover {
+    border-color: var(--border);
+}
+
+.bulletList li::before {
+    content: "✓";
+    color: var(--secondary);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.accordionItem {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-xs);
+    transition: box-shadow 0.2s ease;
+}
+
+.accordionItem:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.accordionTrigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: background-color 0.2s;
+}
+
+.accordionTrigger:hover {
+    background-color: var(--bg-hover);
+}
+
+.accordionTrigger[data-state="open"] {
+    border-bottom: 1px solid var(--border-subtle);
+    background-color: rgba(var(--primary-rgb), 0.02);
+}
+
+.accordionIcon {
+    transition: transform 0.2s;
+    color: var(--text-dim);
+    font-size: 1.2rem;
+}
+
+.accordionTrigger[data-state="open"] .accordionIcon {
+    transform: rotate(180deg);
+}
+
+.accordionContent {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.accordionContent[data-state="open"] {
+    padding: 1.5rem;
+    max-height: 1000px;
+}
+
+.accordionText {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 0.5rem;
+}
+
+.accordionMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.metaBadge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-full);
+    background: rgba(var(--primary-rgb), 0.05);
+    color: var(--primary);
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
+}
+
+.ctaCard {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06), rgba(var(--secondary-rgb), 0.06));
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
+    margin-top: 4rem;
+}
+
+.ctaText {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .bulletList {
+        grid-template-columns: 1fr;
+    }
+
+    .grid3,
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+}

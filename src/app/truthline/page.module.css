@@ -1,0 +1,438 @@
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.kicker {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--secondary);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.85rem;
+    color: var(--text);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.searchCard {
+    margin-bottom: 2.25rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(15, 118, 110, 0.03), rgba(15, 118, 110, 0)),
+        var(--bg-card);
+    box-shadow: var(--shadow-sm);
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.inputGroup {
+    flex: 1;
+}
+
+.label {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 0.55rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--border);
+    background: var(--bg-input);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+.submitBtn {
+    height: 3rem;
+    padding: 0 1.4rem;
+    white-space: nowrap;
+}
+
+.loadingSection {
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--secondary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.errorCard {
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(185, 28, 28, 0.2);
+    border-left: 4px solid #b91c1c;
+    border-radius: var(--radius-md);
+    background: rgba(185, 28, 28, 0.04);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.verdictCard {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.08), transparent 28%),
+        var(--bg-card);
+    box-shadow: var(--shadow-sm);
+}
+
+.verdictInfo {
+    flex: 1;
+}
+
+.verdictValue {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.reasoning {
+    margin-top: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 60ch;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.38rem 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.pill-low {
+    color: #b91c1c;
+    border-color: rgba(185, 28, 28, 0.2);
+    background: rgba(185, 28, 28, 0.06);
+}
+
+.pill-medium {
+    color: #a16207;
+    border-color: rgba(161, 98, 7, 0.2);
+    background: rgba(161, 98, 7, 0.08);
+}
+
+.pill-high {
+    color: #166534;
+    border-color: rgba(22, 101, 52, 0.2);
+    background: rgba(22, 101, 52, 0.08);
+}
+
+.pill-evidence-limited {
+    color: #9a3412;
+    border-color: rgba(154, 52, 18, 0.22);
+    background: rgba(154, 52, 18, 0.06);
+}
+
+.pill-evidence-moderate {
+    color: #1d4ed8;
+    border-color: rgba(29, 78, 216, 0.2);
+    background: rgba(29, 78, 216, 0.06);
+}
+
+.pill-evidence-strong {
+    color: #0f766e;
+    border-color: rgba(15, 118, 110, 0.2);
+    background: rgba(15, 118, 110, 0.06);
+}
+
+.pillWarning {
+    color: #b91c1c;
+    border-color: rgba(185, 28, 28, 0.2);
+    background: rgba(185, 28, 28, 0.06);
+}
+
+.scorePanel {
+    width: 180px;
+    text-align: center;
+}
+
+.scoreCircle {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem auto 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    border: 4px solid var(--secondary);
+    background: rgba(15, 118, 110, 0.04);
+}
+
+.scoreMeta {
+    margin-top: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+.sectionHead {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.snapshotGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.snapItem,
+.findingCard,
+.checkCard,
+.briefCard,
+.stepsCard {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-xs);
+}
+
+.snapItem {
+    padding: 1rem;
+}
+
+.summaryItem {
+    grid-column: span 2;
+}
+
+.snapItem label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.73rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    font-weight: 700;
+}
+
+.snapItem p {
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.checkCard,
+.findingCard {
+    padding: 1rem 1.05rem;
+}
+
+.briefGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.briefCard {
+    padding: 1.1rem;
+}
+
+.signalList,
+.stepsList {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--text-secondary);
+}
+
+.signalList li,
+.stepsList li {
+    line-height: 1.7;
+}
+
+.findingHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.7rem;
+}
+
+.findingArea {
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.severity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.severity-low,
+.status-verified {
+    background: rgba(22, 101, 52, 0.1);
+    color: #166534;
+}
+
+.severity-medium,
+.status-warning {
+    background: rgba(161, 98, 7, 0.12);
+    color: #a16207;
+}
+
+.severity-high,
+.status-unverified {
+    background: rgba(185, 28, 28, 0.1);
+    color: #b91c1c;
+}
+
+.status-not_found {
+    background: rgba(30, 41, 59, 0.08);
+    color: #475569;
+}
+
+.checkDetail {
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.evidenceText {
+    margin-top: 0.55rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.stepsCard {
+    padding: 1rem 1.1rem;
+}
+
+.disclaimer {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .verdictCard {
+        flex-direction: column;
+    }
+
+    .scorePanel {
+        width: 100%;
+    }
+
+    .briefGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding-top: 1.5rem;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .submitBtn {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .summaryItem {
+        grid-column: span 1;
+    }
+}

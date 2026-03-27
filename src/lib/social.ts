@@ -2,8 +2,8 @@ import type { MouseEvent } from 'react';
 
 export const FACEBOOK_WEB_URL = 'https://web.facebook.com/nigeria.impact/';
 export const FACEBOOK_APP_URL = `fb://facewebmodal/f?href=${encodeURIComponent(FACEBOOK_WEB_URL)}`;
-export const INSTAGRAM_WEB_URL = 'https://www.instagram.com/impact_nigeria_';
-export const INSTAGRAM_APP_URL = 'instagram://user?username=impact_nigeria_';
+export const INSTAGRAM_WEB_URL = 'https://www.instagram.com/accessinfact';
+export const INSTAGRAM_APP_URL = 'instagram://user?username=accessinfact';
 const WHATSAPP_PHONE = '+447539487898';
 export const WHATSAPP_WEB_URL = `https://wa.me/${WHATSAPP_PHONE}`;
 export const WHATSAPP_APP_URL = `whatsapp://send?phone=${WHATSAPP_PHONE}`;

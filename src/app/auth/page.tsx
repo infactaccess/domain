@@ -33,6 +33,7 @@ const NIGERIAN_STATES = [
   'Edo',
   'Ekiti',
   'Enugu',
+  'FCT - Abuja',
   'Gombe',
   'Imo',
   'Jigawa',
@@ -372,13 +373,12 @@ export default function AuthPage() {
           {mode === 'signup' && (
             <>
               <div
-                className={`${styles.passwordHint} ${
-                  passwordFeedback.tone === 'bad'
+                className={`${styles.passwordHint} ${passwordFeedback.tone === 'bad'
                     ? styles.passwordHintBad
                     : passwordFeedback.tone === 'okay'
                       ? styles.passwordHintOkay
                       : styles.passwordHintGood
-                }`}
+                  }`}
                 aria-live="polite"
               >
                 <strong>

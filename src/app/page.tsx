@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { FACEBOOK_APP_URL, FACEBOOK_WEB_URL } from '@/lib/social';
+import { FACEBOOK_APP_URL, FACEBOOK_WEB_URL, WHATSAPP_CHANNEL_URL } from '@/lib/social';
 import HomePageActions from '@/components/HomePageActions';
 import SocialLinkButton from '@/components/SocialLinkButton';
 
@@ -216,7 +216,7 @@ export default function HomePage() {
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 Fast, verified alerts sent direct to your inbox.
               </p>
-              <Link href="/broadcasts" className="btn btn-outline">
+              <Link href={WHATSAPP_CHANNEL_URL} className="btn btn-outline">
                 Join WhatsApp
               </Link>
             </div>

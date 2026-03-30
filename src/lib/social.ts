@@ -4,7 +4,7 @@ export const FACEBOOK_WEB_URL = 'https://web.facebook.com/nigeria.impact/';
 export const FACEBOOK_APP_URL = `fb://facewebmodal/f?href=${encodeURIComponent(FACEBOOK_WEB_URL)}`;
 export const INSTAGRAM_WEB_URL = 'https://www.instagram.com/accessinfact';
 export const INSTAGRAM_APP_URL = 'instagram://user?username=accessinfact';
-const WHATSAPP_CHANNEL = 'https://whatsapp.com/channel/0029VbC3mY88fewpaFvPHx18';
+const WHATSAPP_CHANNEL = '0029VbC3mY88fewpaFvPHx18';
 export const WHATSAPP_WEB_URL = `https://wa.me/${WHATSAPP_CHANNEL}`;
 export const WHATSAPP_APP_URL = `whatsapp://app?channel=${WHATSAPP_CHANNEL}`;
 

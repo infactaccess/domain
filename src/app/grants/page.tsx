@@ -233,7 +233,8 @@ export default function GrantsPage() {
                         We simplify the process by bringing verified funding opportunities into one place, while providing clear guidance that helps applicants avoid common mistakes and increase their chances of success.
                     </p>
                     <p className={styles.bodyCopy}>
-                        Our goal is simple: help more people access funding that supports business growth, innovation, and community development.
+                        Our goal is simple: help more people access funding that supports business growth, innovation, community development, and the best is that this is all{" "}
+                        <strong><em>100% FREE</em></strong>.
                     </p>
                 </div>
             </section>
